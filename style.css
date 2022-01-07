@@ -1,0 +1,171 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Outfit", sans-serif;
+}
+
+section {
+  min-height: 100vh;
+  min-width: 100vw;
+  background-color: #0d192b;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section .card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  background-color: #14253d;
+  padding: 2rem;
+  width: 350px;
+  border-radius: 10px;
+}
+
+section .card .card-img {
+  cursor: pointer;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  border-radius: 10px;
+}
+
+section .card .card-img img {
+  height: 100%;
+  width: 100%;
+  border-radius: inherit;
+}
+
+section .card .card-img::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  -webkit-transition: all 200ms ease-in;
+  transition: all 200ms ease-in;
+}
+
+section .card .card-img:hover::before {
+  background-color: #00fff7;
+  opacity: .5;
+}
+
+section .card .card-img::after {
+  content: url(./images/icon-view.svg);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  visibility: hidden;
+  -webkit-transition: all 200ms ease-in;
+  transition: all 200ms ease-in;
+}
+
+section .card .card-img:hover::after {
+  visibility: visible;
+}
+
+section .card h3 {
+  color: white;
+  padding: 1rem 0;
+}
+
+section .card .card-description {
+  color: #8bacda;
+}
+
+section .card .details {
+  padding: 1rem 0;
+  color: #00fff7;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+section .card .details .Eth_amt {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section .card .details .Eth_amt img {
+  padding-right: .5rem;
+}
+
+section .card .details .time {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section .card .details .time img {
+  padding-right: .5rem;
+}
+
+section .card .divider-line {
+  height: 1px;
+  background-color: #2f415b;
+}
+
+section .card .creator {
+  padding: 1rem 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section .card .creator img {
+  height: 30px;
+  width: 30px;
+  border: 1px solid white;
+  border-radius: 50%;
+}
+
+section .card .creator p {
+  padding-left: 1rem;
+  color: #8bacda;
+}
+
+section .card .creator p span {
+  color: white;
+}
+
+@media only screen and (max-width: 600px) {
+  .card {
+    width: 80% !important;
+  }
+}
+/*# sourceMappingURL=style.css.map */

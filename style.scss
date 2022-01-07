@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300&display=swap");
+
+//| varibales
+$Softblue: hsl(215, 51%, 70%);
+$Cyan: hsl(178, 100%, 50%);
+$mainBG: hsl(217, 54%, 11%);
+$cardBG: hsl(216, 50%, 16%);
+$line: hsl(215, 32%, 27%);
+$White: hsl(0, 0%, 100%);
+$outfit: "Outfit", sans-serif;
+
+//| varibales
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $outfit;
+}
+section {
+  min-height: 100vh;
+  min-width: 100vw;
+  background-color: $mainBG;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .card {
+    display: flex;
+    flex-flow: column;
+    background-color: $cardBG;
+    padding: 2rem;
+    width: 350px;
+    border-radius: 10px;
+    .card-img {
+        cursor: pointer;
+        position: relative;
+      height: 100%;
+      width: 100%;      
+      border-radius: 10px;
+    //   background-color: white;
+      img {
+        height: 100%;
+        width: 100%;                       
+        border-radius:inherit;
+      }      
+    }
+    .card-img::before{
+        content: "";
+        position: absolute;
+        inset: 0;           
+        border-radius: inherit; 
+        transition: all 200ms ease-in;                  
+    }    
+    .card-img:hover::before{
+        background-color:$Cyan;
+        opacity: .5;
+    }
+    .card-img::after{
+        content: url(./images/icon-view.svg);                
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        visibility: hidden;   
+        transition: all 200ms ease-in;     
+    }
+    .card-img:hover::after {    
+        visibility: visible;    
+    }
+    h3{
+        color: $White;
+        padding: 1rem 0;
+    }
+    .card-description{
+        color:$Softblue;
+    }
+    .details{
+        padding: 1rem 0;
+        color: $Cyan;
+        display: flex;
+        justify-content: space-between;
+        .Eth_amt{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;   
+            img{
+                padding-right: .5rem;
+            }                    
+        }
+        .time{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img{
+                padding-right: .5rem;
+            }
+        }
+    }
+    .divider-line{
+        height: 1px;
+        background-color:$line;
+    }
+    .creator{
+        padding: 1rem 0 0;
+        display: flex;
+        align-items: center;
+        img{
+            height: 30px;
+            width: 30px;
+            border: 1px solid $White;
+            border-radius: 50%;            
+        }
+        p{
+            padding-left: 1rem;
+            color: $Softblue;
+            span{
+                color:$White;
+            }
+        }
+    }
+  }
+}
+@media only screen and (max-width:600px){
+    .card{
+        width: 80% !important;
+    }
+}
