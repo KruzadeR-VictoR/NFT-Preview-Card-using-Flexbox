@@ -61,7 +61,7 @@ main .card .card-img::before {
 
 main .card .card-img:hover::before {
   background-color: #00fff7;
-  opacity: .5;
+  opacity: 0.5;
 }
 
 main .card .card-img::after {
@@ -80,9 +80,10 @@ main .card .card-img:hover::after {
   visibility: visible;
 }
 
-main .card h3 {
-  color: white;
+main .card h1 {
+  font-size: 1.17em;
   padding: 1rem 0;
+  color: white;
 }
 
 main .card .card-description {
@@ -113,7 +114,7 @@ main .card .details .Eth_amt {
 }
 
 main .card .details .Eth_amt img {
-  padding-right: .5rem;
+  padding-right: 0.5rem;
 }
 
 main .card .details .time {
@@ -129,7 +130,7 @@ main .card .details .time {
 }
 
 main .card .details .time img {
-  padding-right: .5rem;
+  padding-right: 0.5rem;
 }
 
 main .card .divider-line {

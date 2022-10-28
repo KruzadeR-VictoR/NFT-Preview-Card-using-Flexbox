@@ -32,96 +32,97 @@ main {
     width: 350px;
     border-radius: 10px;
     .card-img {
-        cursor: pointer;
-        position: relative;
+      cursor: pointer;
+      position: relative;
       height: 100%;
-      width: 100%;      
+      width: 100%;
       border-radius: 10px;
-    //   background-color: white;
+      //   background-color: white;
       img {
         height: 100%;
-        width: 100%;                       
-        border-radius:inherit;
-      }      
+        width: 100%;
+        border-radius: inherit;
+      }
     }
-    .card-img::before{
-        content: "";
-        position: absolute;
-        inset: 0;           
-        border-radius: inherit; 
-        transition: all 200ms ease-in;                  
-    }    
-    .card-img:hover::before{
-        background-color:$Cyan;
-        opacity: .5;
+    .card-img::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      transition: all 200ms ease-in;
     }
-    .card-img::after{
-        content: url(./images/icon-view.svg);                
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%,-50%);
-        visibility: hidden;   
-        transition: all 200ms ease-in;     
+    .card-img:hover::before {
+      background-color: $Cyan;
+      opacity: 0.5;
     }
-    .card-img:hover::after {    
-        visibility: visible;    
+    .card-img::after {
+      content: url(./images/icon-view.svg);
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      visibility: hidden;
+      transition: all 200ms ease-in;
     }
-    h3{
-        color: $White;
-        padding: 1rem 0;
+    .card-img:hover::after {
+      visibility: visible;
     }
-    .card-description{
-        color:$Softblue;
+    h1 {
+      font-size: 1.17em;
+      padding: 1rem 0;
+      color: $White;
     }
-    .details{
-        padding: 1rem 0;
-        color: $Cyan;
+    .card-description {
+      color: $Softblue;
+    }
+    .details {
+      padding: 1rem 0;
+      color: $Cyan;
+      display: flex;
+      justify-content: space-between;
+      .Eth_amt {
         display: flex;
         justify-content: space-between;
-        .Eth_amt{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;   
-            img{
-                padding-right: .5rem;
-            }                    
-        }
-        .time{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            img{
-                padding-right: .5rem;
-            }
-        }
-    }
-    .divider-line{
-        height: 1px;
-        background-color:$line;
-    }
-    .creator{
-        padding: 1rem 0 0;
-        display: flex;
         align-items: center;
-        img{
-            height: 30px;
-            width: 30px;
-            border: 1px solid $White;
-            border-radius: 50%;            
+        img {
+          padding-right: 0.5rem;
         }
-        p{
-            padding-left: 1rem;
-            color: $Softblue;
-            span{
-                color:$White;
-            }
+      }
+      .time {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+          padding-right: 0.5rem;
         }
+      }
+    }
+    .divider-line {
+      height: 1px;
+      background-color: $line;
+    }
+    .creator {
+      padding: 1rem 0 0;
+      display: flex;
+      align-items: center;
+      img {
+        height: 30px;
+        width: 30px;
+        border: 1px solid $White;
+        border-radius: 50%;
+      }
+      p {
+        padding-left: 1rem;
+        color: $Softblue;
+        span {
+          color: $White;
+        }
+      }
     }
   }
 }
-@media only screen and (max-width:600px){
-    .card{
-        width: 80% !important;
-    }
+@media only screen and (max-width: 600px) {
+  .card {
+    width: 80% !important;
+  }
 }
